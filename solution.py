@@ -15,6 +15,8 @@ from tqdm import tqdm
 from PIL import ImageFile
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
+import time
+
 # rom torch_snippets import Report
 # from torch_snippets import *
 
@@ -140,7 +142,12 @@ criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.fc.parameters(), lr=learning_rate)
 
 logger.info("Starting Model Training")
+start = time.time()
+print('started', start)
 model=train(model, train_loader, validation_loader, criterion, optimizer)
 torch.save(model.state_dict(), 'TrainedModels/model.pth')
 print('saved')
+end = time.time()
+print('finished', end)
+print('Duration', end - start)
 
