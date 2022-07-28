@@ -27,3 +27,10 @@ sagemaker-running-notebook-in-vpc.png
 sagemaker-deployed-endpoint.png
 
 endpoint name pytorch-inference-2022-07-27-18-49-58-516
+
+## Using EC2
+
+Deep Learning AMI GPU PyTorch 1.12.0 (Amazon Linux 2) 20220727
+ami-012fb2e1c5d400f97
+
+m5.xlarge (4 CPU 16 GB
